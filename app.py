@@ -30,11 +30,12 @@ with col1:
     st.title("Digit AI Agent Eecognition")
 with col2:
     st.image("1.png", width=220)
+st.divider()
 # 2. BRANDING LOGO & SIDEBAR SYSTEM STATUS LOGS
 with st.sidebar:
     # App Branding Logo Placeholder (Using a beautiful clean text/emoji design)
     st.markdown("## 🧠 **DIGIT DOCTOR AI**")
-    
+    st.image("1.png". width=220)
     st.caption("v1.0.0 Stable Enterprise Edition")
     st.markdown("---")
     
