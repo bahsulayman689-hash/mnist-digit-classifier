@@ -35,8 +35,8 @@ st.divider("--")
 with st.sidebar:
     # 📌 ADD YOUR PICTURE HERE
     # If your picture is uploaded to your repository, it will read it directly from local project path:
-    if os.path.exists("profile.jpg"):
-        st.image("profile.jpg", caption="Sulayman Bah - ML Engineer", use_container_width=True)
+    if os.path.exists("IMG-20260704-WA0633.jpg"):
+        st.image("IMG-20260704-WA0633.jpg", caption="Sulayman Bah - ML Engineer", use_container_width=True)
     else:
         # Fallback beautiful avatar image placeholder if the file hasn't finished uploading yet
         st.image("https://w3schools.com", caption="Sulayman Bah - ML Engineer", use_container_width=True)
