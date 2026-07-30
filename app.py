@@ -12,7 +12,7 @@ st.set_page_config(
     layout="wide", # Switched to wide mode to better accommodate the analytical layouts
     initial_sidebar_state="expanded"
 )
-
+st.logo("1.png")
 # Custom CSS styling injection to build a clean corporate tech interface
 st.markdown("""
     <style>
