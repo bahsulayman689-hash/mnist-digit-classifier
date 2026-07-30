@@ -33,6 +33,15 @@ with col2:
 st.divider("--")
 # 2. BRANDING LOGO & SIDEBAR SYSTEM STATUS LOGS
 with st.sidebar:
+    # 📌 ADD YOUR PICTURE HERE
+    # If your picture is uploaded to your repository, it will read it directly from local project path:
+    if os.path.exists("profile.jpg"):
+        st.image("profile.jpg", caption="Sulayman Bah - ML Engineer", use_container_width=True)
+    else:
+        # Fallback beautiful avatar image placeholder if the file hasn't finished uploading yet
+        st.image("https://w3schools.com", caption="Sulayman Bah - ML Engineer", use_container_width=True)
+        
+with st.sidebar:
     # App Branding Logo Placeholder (Using a beautiful clean text/emoji design)
     st.markdown("## 🧠 **DIGIT DOCTOR AI**")
     
@@ -73,6 +82,15 @@ def build_and_train_weights():
     X_train = X_train / 255.0
     
     model = keras.Sequential([
+         # First Convolutional Layer to extract edges, curves, and patterns
+        keras.layers.Conv2D(32, kernel_size=(3, 3), activation='relu', input_shape=(28, 28, 1)),
+        # Max Pooling to downsample the image feature map and reduce spatial dimensions
+        keras.layers.MaxPooling2D(pool_size=(2, 2)),
+        
+        # Second Convolutional Layer for deeper pattern matching
+        keras.layers.Conv2D(64, kernel_size=(3, 3), activation='relu'),
+        keras.layers.MaxPooling2D(pool_size=(2, 2)),
+        
         keras.layers.Flatten(input_shape=(28, 28)),
         keras.layers.Dense(128, activation='relu'), 
         keras.layers.Dense(64, activation='relu'),  
