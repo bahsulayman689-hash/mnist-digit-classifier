@@ -132,7 +132,7 @@ with tab2:
 # 6. Core Enterprise Inference Execution Flow Block
 if raw_image is not None:
     st.markdown("---")
-    col1, col2 = st.columns()
+    col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("**Processed Input Vector:**")
