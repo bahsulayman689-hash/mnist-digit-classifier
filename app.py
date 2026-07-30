@@ -30,7 +30,7 @@ with col1:
     st.title("Digit AI Agent Eecognition")
 with col2:
     st.image("1.png", width=220)
-st.divider("--")
+
 # 2. BRANDING LOGO & SIDEBAR SYSTEM STATUS LOGS
 with st.sidebar:
     # 📌 ADD YOUR PICTURE HERE
